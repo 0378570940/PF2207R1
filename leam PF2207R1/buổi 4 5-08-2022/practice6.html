@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Luyện tập tạo form</title>
+    <style>
+      body {
+        background-color: #90f0ef;
+      }
+      .mail {
+        background-color: white;
+        width: 50%;
+        height: 280px;
+        margin-left: 23%;
+        margin-top: 3%;
+      }
+      .interests {
+        background-color: #ff3e17;
+        height: 35px;
+        margin-left: 10px;
+        margin-right: 10px;
+        text-align: center;
+        padding-top: 15px;
+        font-size: 25px;
+        color: white;
+      }
+      .information {
+        margin-left: 100px;
+        margin-top: 8px;
+      }
+      .col-25 {
+        float: left;
+        width: 20%;
+        margin-top: 2px;
+      }
+      .checkBox{
+        float: right;
+        width: 80%;
+        margin-top: 5px;
+      }
+      .nut1 {
+          margin-top: 3%;
+          margin-left: 250px;
+      }
+
+      .mail2{
+        background-color: #AB9A16;
+        width: 50%;
+        height: 350px;
+        margin-left: 23%;
+        margin-top: 3%;
+      }
+      .student{
+          background-color: #579998;
+          margin-left: 10px;
+          margin-right: 10px;
+          height: 35px;
+          font-size: 25px;
+          color: #155699;
+          padding-top: 5px;
+      }
+      .studention{
+          margin-top: 10px;
+          margin-left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mail">
+      <div class="interests"><b>SỞ THÍCH CỦA BẠN</b></div>
+      <div class="information">
+        <form action="#">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Họ và tên</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="fname"
+                name="firstname"
+                placeholder="Your name.."
+              />
+            </div> 
+            </div> <br>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Email</label>
+            </div>
+            <div class="col-75">
+              <input
+                type="text"
+                id="lname"
+                name="lastname"
+                placeholder="Your last gmail.."
+              />
+            </div> <br>
+            Sở thích
+            <div class="checkBox">
+              <input type="checkBox" name="" value="" /> Thể thao
+              <input type="checkBox" name="" value="" /> Lướt web
+              <input type="checkBox" name="" value="" /> Du lịch
+            </div>
+            <div class="checkBox">
+              <input type="checkBox" name="" value="" /> Âm nhạc
+              <input type="checkBox" name="" value="" /> Chơi game
+            </div>
+            <div class="checkBox">
+              <input type="checkBox" name="" value="" /> Đọc sách
+              <input type="checkBox" name="" value="" /> Điện ảnh
+            </div>
+        </form>
+    </div>
+    </div>
+    <button class="nut1" type="Submit">Gửi Thông tin</button>
+    <button class="nut2" type="Reset ">Nhập lại</button>
+    </div> <br>
+
+    <div class="mail2">
+        <div class="student"><b>Đăng Ký Học Viên</b></div>
+
+        <div class="studention">
+            <form action="#">
+                <div class="col-25">
+                    <label for="fname">Họ và tên</label>
+                </div>
+                        <input type="text" name="finame"> <br> <br>
+
+                <div class="col-25">
+                    <label for="fname">Ngày Sinh</label>
+                </div>
+                        <input type="text" name="ngaysinh"> <br> <br>
+
+                 <div class="col-25">
+                    <label for="fname">Giới Tính</label>
+                 </div>
+                <input type="radio" name="#" value="Nam">Nam
+                <input type="radio" name="#" value="Nữ">Nữ <br> <br>
+
+                <div class="col-25">
+                    <label for="fname">Địa chỉ</label>
+                 </div>
+                 <input type="file"> <br> <br>
+
+                 <div class="col-25">
+                    <label for="fname">Lớp</label>
+                 </div>
+                 <select name="" id="">
+                     <option value="">LTMT</option>
+                     <option value="">TKWEB</option>
+                     <option value="">QTM</option>
+                 </select> <br> <br>
+
+                 <div class="col-25">
+                    <label for="fname">Email</label>
+                 </div>
+                 <input type="email"> <br> <br>
+
+                 <div class="col-25">
+                    <label for="fname">Điện Thoại</label>
+                 </div>
+                 <input type="number"><br> <br>
+
+                 <button type="submit" style=" margin-left:140px;">Đăng Ký</button>
+                 <button type="reset">Nhập lại</button>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>
