@@ -9,12 +9,47 @@
 </head>
 
 <body>
-    <p onclick="alert('hello')"> click</p>
+    <p onclick="alert('hello')"> clicks</p>
+    <input type="text" id="nhap">
+    <button onclick="demo()">click</button>
+    <button onclick="demo1()">click1</button>
+    <button onclick="demo2()">click2</button>
+    <button onclick="demo3()">click3</button>
+    <button onclick="demo4()">click4</button>
+    <div id="result1"></div>
+    <div id="result2"></div>
 </body>
 <!-- sử dụng internal -->
 <script>
     // alert("hello");
-    let string= prompt("nhập vào đây: ")
+    // let string= prompt("nhập vào đây: ")
+
+    function demo(){
+        let string = document.getElementById("nhap").value;
+        console.log(string);
+    }
+
+    function demo1(){
+        let string1 =document.getElementById("nhap").value;
+        alert(string1);
+    }
+
+    function demo2(){
+        let string2 = document.getElementById("nhap").value;
+        confirm(string2);
+    }
+
+    function demo3(){
+        let string3 = document.getElementById("nhap").value;
+        document.write(string3);
+    }
+
+    function demo4(){
+        let string4 = document.getElementById("nhap").value;
+        document.getElementById("result1").innerText = "<h1>" + string4 + "</h1>"
+        document.getElementById("result2").innerHTML = "<h1>" + string4 + "</h1>"
+    }
+
 </script>
 
 
