@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Money</h1>
+    <table>
+        <tr>
+            <th>Money($)</th>
+            <td><input type="text" id="money"></td>
+        </tr>
+        <tr>
+            <th>Rate(%)</th>
+            <td><input type="text" id="rate"></td>
+        </tr>
+        <tr>
+            <th>Year</th>
+            <td><input type="text" id="year"></td>
+        </tr>
+    </table>
+    <h2 id="result"></h2>
+    <button onclick="calMoney()">click</button>
+</body>
+<script>
+    function calMoney() {
+        let money = Number(document.getElementById("money").value);
+        let rate = document.getElementById("rate").value;
+        let year = document.getElementById("year").value;
+        let result = money + rate * (money * rate / 100);
+        document.getElementById("result").innerHTML = "số tiền nhận đc là: " + result + "$";
+    }
+</script>
+
+</html>

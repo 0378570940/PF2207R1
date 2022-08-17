@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài giảng] Demo sự kiện onchange</title>
+</head>
+
+<body>
+    <h1>Chọn sự kiện onchan</h1>
+    <select name="" id="mySelect" onchange="clickonchen()">
+        <option value="hanoi">Hà Nội</option>
+        <option value="danang">Đà Nẵng</option>
+        <option value="hochiminh">TP. Hồ Chí Minh</option>
+    </select>
+</body>
+<script>
+    // cách 1
+    // function clickonchen(){
+    //     let selectValue = document.getElementById("mySelect").value;
+    //     alert(selectValue);
+    // }
+
+    // cách 2 bắt sự kiện onchenge theo cách khác
+    let selectElement = document.getElementById("mySelect");
+    selectElement.addEventListener("change", changeFunction);
+    function changeFunction() {
+        let selectValue = document.getElementById("mySelect").value;
+        alert(selectValue);
+    }
+</script>
+
+</html>

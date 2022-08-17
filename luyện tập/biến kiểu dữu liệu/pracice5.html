@@ -10,7 +10,7 @@
     <h1>tính chu vi và diện tích</h1>
     bán kính là:
     <input type="text" name="" id="radius">
-    <p id="demo">Chu vi là:</p>
+    <p>Chu vi là: <span id="demo"></span></p>
     <p id="demo1">diện tích là:</p>
     <button onclick="myFunction()">click</button>
     <button onclick="myFunction1()">click1</button>
@@ -20,7 +20,7 @@
         let r=document.getElementById("radius").value;
         let pi = 3.14;
         let c= 2*r*pi;
-        document.getElementById("demo").innerHTML=c;
+        document.getElementById("demo").innerHTML= c ;
     }
 
     function myFunction1(){
