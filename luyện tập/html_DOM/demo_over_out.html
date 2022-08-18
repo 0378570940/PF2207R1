@@ -9,19 +9,15 @@
 </head>
 
 <body>
-    <p id="demo">this is a text</p>
+    <p onmouseover="onMouseOver()" onmouseout="onMouseOut()" id="demo">this is a text</p>
 </body>
 <script>
-    let demo = document.getElementById("demo");
-    demo.addEventListener("onmouover", onmouover);
-    demo.addEventListener("onmouout", onmouout);
-    
-    function onmouover() {
-        document.getElementById("demo").style.color = "red";
+    function onMouseOver(){
+        document.getElementById("demo").style.color="red";
     }
 
-    function onmouout() {
-        document.getElementById("demo").style.color = "black";
+    function onMouseOut(){
+        document.getElementById("demo").style.color="blue"
     }
 </script>
 

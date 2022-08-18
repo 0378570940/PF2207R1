@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>[Bài giảng] Demo sự kiện onclick</title>
 </head>
+
 <body>
     <p onclick="myFunction()">click me</p>
     <p id="demo">click nhe</p>
 </body>
 <script>
-    function myFunction(){
-        alert("Hello Wrod");
-    }
-    let demo = document.getElementById("demo");
-    // addEventListener bắt sự kiện click
-    demo.addEventListener("click",clickFunction);
-    function clickFunction(){
-        alert("xin chào");
+    let demo = document.getElementById("demo")
+    demo.addEventListener("click", clickFunction)
+    function clickFunction() {
+        alert("xin chào")
     }
 </script>
+
 </html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="createFunction()">Click</button>
+    <div id="div"></div>
+</body>
+<script>
+   function createFunction(){
+    let but = document.createElement("button")
+    but.innerHTML="ClickMe"
+    
+    document.body.appendChild(but)
+
+    let but1= document.createElement("h1")
+    but1.innerHTML= "nguyễn Anh Việt"
+    let div = document.getElementById("div")
+    div.appendChild(but1)
+    div.style.color="blue"
+   }
+</script>
+
+</html>
