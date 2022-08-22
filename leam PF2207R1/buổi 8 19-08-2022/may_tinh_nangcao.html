@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4"><input type="text" name="" id="display"></td>
+        </tr>
+        <tr>
+            <td><button onclick="add5()">(</button></td>
+            <td><button onclick="add6()">)</button></td>
+            <td><button onclick="add7()">%</button></td>
+            <td><button onclick="add8()">C</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num7()">7</button></td>
+            <td><button onclick="num8()">8</button></td>
+            <td><button onclick="num9()">9</button></td>
+            <td><button onclick="add3()">/</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num4()">4</button></td>
+            <td><button onclick="num5()">5</button></td>
+            <td><button onclick="num6()">6</button></td>
+            <td><button onclick="add2()">*</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num1()">1</button></td>
+            <td><button onclick="num2()">2</button></td>
+            <td><button onclick="num3()">3</button></td>
+            <td><button onclick="add1()">-</button></td>
+        </tr>
+        <tr>
+            <td><button onclick="num0()">0</button></td>
+            <td><button onclick="add4()">.</button></td>
+            <td><button onclick="calResult()">=</button></td>
+            <td><button onclick="add()">+</button></td>
+        </tr>
+    </table>
+</body>
+<script>
+    function num7() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 7;
+    }
+    function num8() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 8;
+    }
+    function num9() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 9;
+    }
+    function num6() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 6;
+    }
+    function num5() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 5;
+    }
+    function num4() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 4;
+    }
+    function num3() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 3;
+    }
+    function num2() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 2;
+    }
+    function num1() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 1;
+    }
+    function num0() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + 0;
+    }
+
+    function add() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + "+";
+    }
+    function add1() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + "-";
+    }
+    function add2() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + "*";
+    }
+    function add3() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + "/";
+    }
+    function add4() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + ".";
+    }
+    function add5() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + "(";
+    }
+    function add6() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + ")";
+    }
+    function add7() {
+        let display = document.getElementById("display").value
+        document.getElementById("display").value = display + "%";
+    }
+    function add8() {
+        let display = document.getElementById("display").value;
+        display.removeChild();
+
+    }
+
+    function calResult() {
+        let display = document.getElementById("display").value
+        let result = eval(display)
+        document.getElementById("display").value = result;
+    }
+</script>
+
+</html>

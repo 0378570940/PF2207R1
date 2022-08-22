@@ -12,19 +12,38 @@
 
 </body>
 <script>
+    // let year = prompt("nhập số năm: ");
+    // if (year % 4 == 0) {
+    //     if (year % 100 == 0) {
+    //         if (year % 400 == 0) {
+    //             alert(year + " là năm nhuận");
+    //         } else {
+    //             alert(year + " không phải năm nhuận");
+    //         }
+    //     } else {
+    //         alert(year + " là năm nhuận")
+    //     }
+    // } else {
+    //     alert(year + " không là năm nhuận")
+    // }
+
+    // cách 2===
     let year = prompt("nhập số năm: ");
+    let isleapyear = false
     if (year % 4 == 0) {
         if (year % 100 == 0) {
             if (year % 400 == 0) {
-                alert(year + " là năm nhuận");
-            } else {
-                alert(year + " không phải năm nhuận");
+                isleapyear = true
             }
         } else {
-            alert(year + " là năm nhuận")
+            isleapyear = true
         }
+    }
+
+    if (isleapyear) {
+        alert(year + " là năm nhuận");
     } else {
-        alert(year + " không là năm nhuận")
+        alert(year + " không là năm nhuận");
     }
 </script>
 

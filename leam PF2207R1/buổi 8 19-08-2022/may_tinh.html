@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <br>
+    <h3 id="result"></h3>
+    <button onclick="add()">công</button>
+    <button onclick="add1()">chừ</button>
+    <button onclick="add2()">nhân</button>
+    <button onclick="add3()">chia</button>
+</body>
+<script>
+    function add() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 + number2;
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function add1() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 - number2;
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function add2() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 * number2;
+        document.getElementById("result").innerHTML = result;
+    }
+
+    function add3() {
+        let number1 = Number(document.getElementById("number1").value)
+        let number2 = Number(document.getElementById("number2").value)
+        let result = number1 / number2;
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+</html>
