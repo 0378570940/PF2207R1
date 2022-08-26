@@ -10,16 +10,16 @@
 
 <body>
     <input type="text" name="" id="input">
-    <button onclick="click()">click</button>
+    <button onclick="clickFunction()">click</button>
     <div id="demo"></div>
 </body>
 <script>
-    function click() {
-        let input = document.getElementById("input").value;
-        let cam = input % 10;
+    function clickFunction() {
+        let input = +document.getElementById("input").value;
+        let can = input % 10;
         let chi = input % 12;
         let namamlich = "";
-        switch (input) {
+        switch (can) {
             case 0:
                 namamlich += "canh";
                 break;
@@ -51,7 +51,8 @@
                 namamlich += "Kỷ";
                 break;
         }
-        switch (input) {
+
+        switch (chi) {
             case 0:
                 namamlich += "Thân";
                 break;
@@ -89,7 +90,7 @@
                 namamlich += "Mùi";
                 break;
         }
-        document.getElementById("demo").innerHTML = "Năm Âm Lịch Là:" + namamlich;
+        document.getElementById("demo").innerHTML = "Năm Âm Lịch Là: " + input + " là " + namamlich;
     }
 </script>
 
