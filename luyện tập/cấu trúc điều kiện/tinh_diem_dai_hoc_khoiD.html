@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tính điểm Đại học khối D</title>
+</head>
+
+<body>
+    <h1>Tính điểm DH khối D</h1>
+    Mốn Toán <input type="text" id="maths"> <br>
+    Môn Văn <input type="text" name="" id="literary"> <br>
+    Môn Anh <input type="text" name="" id="english"> <br>
+    khu Vực
+    <select name="" id="area">
+        <option value="KV1">KV1</option>
+        <option value="KV2">KV2</option>
+        <option value="KV2-NT">KV2-NT</option>
+        <option value="KV3">KV3</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <button onclick="score()">Tính Điểm</button>
+    <div id="demo"></div>
+</body>
+<script>
+    function score() {
+        let maths = Number(document.getElementById("maths").value);
+        let literary = Number(document.getElementById("literary").value);
+        let english = Number(document.getElementById("english").value);
+        let area = document.getElementById("area").value;
+        let sum = maths + literary + english;
+        switch (area) {
+            case "KV1":
+                document.getElementById("demo").innerHTML = "Tổng điểm ĐH Khối D là:" + sum + 0.75;
+                // console.log(sum + 0.75)
+                break;
+            case "KV2":
+                document.getElementById("demo").innerHTML = "Tổng điểm ĐH Khối D là:" + sum + 0.5;
+                break;
+            case "KV2-NT":
+                document.getElementById("demo").innerHTML = "Tổng điểm ĐH Khối D là:" + sum + 0.25;
+                break;
+            case "KV3":
+                document.getElementById("demo").innerHTML = "Tổng điểm ĐH Khối D là:" + sum + 0;
+                break;
+        }
+    }
+</script>
+
+</html>

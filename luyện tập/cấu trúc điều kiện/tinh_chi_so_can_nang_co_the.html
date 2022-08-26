@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewp
+    ort" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Tính chỉ số cân nặng của cơ thể (JS)</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let height = parseFloat(prompt("nhậ p chiều cao: "));
+    let weight = (prompt("nhập cân nặng: "));
+    let bmi = weight / (height * height)
+    if (bmi > 40) {
+        alert("béo cấp độ 2")
+    } else if (35 <= bmi) {
+        alert("béo cấp độ 2")
+    } else if (30 <= bmi) {
+        alert("béo cấp độ 1")
+    } else if (25 <= bmi) {
+        alert("thừa cân")
+    } else if (18.5 <= bmi) {
+        alert("bình thường")
+    } else if (17 <= bmi) {
+        alert("cấp độ 1")
+    } else if (16 <= bmi) {
+        alert("cấp độ 2")
+    } else if (bmi < 16) {
+        alert("cấp độ 3")
+    }
+</script>
+
+</html>

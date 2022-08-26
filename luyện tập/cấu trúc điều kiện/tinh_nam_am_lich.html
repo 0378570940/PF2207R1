@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[*Bài tập] Tính năm âm lịch từ năm dương lịch</title>
+</head>
+
+<body>
+    <input type="text" name="" id="input">
+    <button onclick="click()">click</button>
+    <div id="demo"></div>
+</body>
+<script>
+    function click() {
+        let input = document.getElementById("input").value;
+        let cam = input % 10;
+        let chi = input % 12;
+        let namamlich = "";
+        switch (input) {
+            case 0:
+                namamlich += "canh";
+                break;
+            case 1:
+                namamlich += "Tân";
+                break;
+            case 2:
+                namamlich += "Nhân";
+                break;
+            case 3:
+                namamlich += "Quý";
+                break;
+            case 4:
+                namamlich += "Giáp";
+                break;
+            case 5:
+                namamlich += "Ất";
+                break;
+            case 6:
+                namamlich += "Bich";
+                break;
+            case 7:
+                namamlich += "Đinh";
+                break;
+            case 8:
+                namamlich += "Mậu";
+                break;
+            case 9:
+                namamlich += "Kỷ";
+                break;
+        }
+        switch (input) {
+            case 0:
+                namamlich += "Thân";
+                break;
+            case 1:
+                namamlich += "Dậu";
+                break;
+            case 2:
+                namamlich += "Tuất";
+                break;
+            case 3:
+                namamlich += "Hợi";
+                break;
+            case 4:
+                namamlich += "Tý";
+                break;
+            case 5:
+                namamlich += "Sửu";
+                break;
+            case 6:
+                namamlich += "Dần";
+                break;
+            case 7:
+                namamlich += "Mẹo";
+                break;
+            case 8:
+                namamlich += "Thìn";
+                break;
+            case 9:
+                namamlich += "Tỵ";
+                break;
+            case 10:
+                namamlich += "Ngọ";
+                break;
+            case 11:
+                namamlich += "Mùi";
+                break;
+        }
+        document.getElementById("demo").innerHTML = "Năm Âm Lịch Là:" + namamlich;
+    }
+</script>
+
+</html>

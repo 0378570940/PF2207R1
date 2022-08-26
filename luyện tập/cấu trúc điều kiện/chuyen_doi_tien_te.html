@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Ứng dụng chuyển đổi tiền tệ (JS)</title>
+    <style>
+        button {
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                Amount <br>
+                <input type="text" id="input">
+            </td>
+            <td>
+                Amount <br>
+                <select name="" id="vn">
+                    <option value="1">USB</option>
+                    <option value="23000">VND</option>
+                    <option value="3000">NDT</option>
+                </select>
+            </td>
+            <td>
+                Amount <br>
+                <select name="" id="usd">
+                    <option value="1">USB</option>
+                    <option value="23000">VND</option>
+                    <option value="3000">NDT</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="convert()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="demo"></div>
+</body>
+<script>
+    function convert() {
+        let input = Number(document.getElementById("input").value);
+        let vietnam = Number(document.getElementById("vn").value);
+        let usd = Number(document.getElementById("usd").value);
+        let maney = input * usd / vietnam;
+        document.getElementById("demo").innerHTML = "<h2>" + maney + "</h2>";
+    }
+</script>
+
+</html>
