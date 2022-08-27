@@ -12,11 +12,20 @@
     <h1 id="demo"></h1>
 </body>
 <script>
-    let text = "";
-    for (let i = 0; i < 5; i++) {
-        text = text + "the Number N" + i + "</br>";
+    // bài 1
+    // let text = "";
+    // for (let i = 0; i < 5; i++) {
+    //     text = text + "the Number N" + i + "</br>";
+    // }
+    // document.getElementById("demo").innerHTML = text + "</br>";
+    // bài2
+    let num = +prompt("nhap số: ")
+    let tong = 0;
+    for (let i = 1; i <= num; i = i + 1) {
+        tong = tong + i;
+        alert("tổng của só vừa nhập là: " + tong);
     }
-    document.getElementById("demo").innerHTML = text + "</br>";
+
 </script>
 
 </html>
