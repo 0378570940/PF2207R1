@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="complete()">click1</button>
+    <button onclick="temperature()">click2</button>
+    <button onclick="fibonacci()">click3+4+5</button>
+    <button onclick="sum()">click6</button>
+    <button onclick="chia()">click7</button>
+    <div id="reaunt"></div>
+</body>
+<script>
+    // bài1
+    function complete() {
+        let count = 1;
+        let text = "";
+        while (count <= 100) {
+            if (count === 99) {
+                text += "99 đã hoàn thành <br>"
+            } else {
+                text += count + "<br>";
+            }
+            count++;
+            // console.log(count);
+            document.getElementById("reaunt").innerHTML = text;
+        }
+    }
+
+    // bài 2
+    function temperature() {
+        let temperature = 0
+        do {
+            temperature = +prompt("nhập nhiệt độ là: ")
+            if (temperature > 100) {
+                alert("giảm nhiệt độ");
+            } else if (temperature < 20) {
+                alert("tăng nhiệt độ");
+            } else if (temperature > 20 && temperature < 100) {
+                alert("nhiệt độ trung bình")
+            }
+        } while (temperature < 20 || temperature > 100)
+    }
+
+    // bai 3+5
+    function fibonacci() {
+        let count = 0;
+        let numner1 = 0;
+        let number2 = 1;
+        let result = "";
+        let sum = 0;
+        while (count < 20) {
+            result = result + "số fibonacci đầu tiên " + (count + 1) + "  là " + number2 + "<br>";
+            sum = sum + number2;
+            let tem = numner1 + number2;
+            numner1 = number2;
+            number2 = tem;
+            count++;
+        }
+        result = result + "tổng của 20 số đầu tiên của dãy fibonacci" + sum + "<br>"
+        // bai4
+        let check = true;
+        let num1 = 0;
+        let num2 = 1;
+        while (check) {
+            if (num1 % 5 === 0) {
+                result = result + "dãy fibonacci chia hết cho 5 là: " + num2;
+                check = false;
+            }
+            let temp = num1 + num2;
+            num1 = num2;
+            num2 = temp;
+        }
+        document.getElementById("reaunt").innerHTML = result + "<br>";
+    }
+
+    // bai6
+    function sum() {
+        let sum = 0
+        for (let i = 0; i < 30; i++) {
+            sum = sum + (i * 7)
+        }
+        document.getElementById("reaunt").innerHTML = "tổng của 30 chia hết cho 7 là: " + sum
+    }
+
+    // bai7
+    function chia() {
+        let text = ""
+        for (let i = 0; i <= 100; i++) {
+            if (i % 3 === 0 && i % 5 === 0) {
+                text = text + "FizzBuzz <br>";
+            } else if (i % 3 === 0) {
+                text = text + "fizz <br>";
+            } else if (i % 5 === 0) {
+                text = text + "Buzz <br>"
+            } else {
+                text = text + i
+            }
+        }
+        document.getElementById("reaunt").innerHTML = text + "<br>";
+    }
+</script>
+
+</html>

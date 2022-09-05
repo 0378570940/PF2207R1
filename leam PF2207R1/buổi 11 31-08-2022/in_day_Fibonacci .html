@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] In dãy Fibonacci</title>
+</head>
+
+<body>
+    nhập số
+    <input type="text" name="" id="demo">
+    <button onclick="fibonacci()">ok</button>
+    <div id="result"></div>
+</body>
+<script>
+    function fibonacci() {
+        let n = document.getElementById("demo").value;
+        let num1 = 0;
+        let num2 = 1;
+        let result = "";
+        while (n < 6) {
+            result = result + "Số Fibonacci gồm" + (n + 1) + "  là" + num2 + "<br>";
+            let tem = num1 + num2;
+            num1 = num2
+            num2 = tem;
+            n++;
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+
+</html>

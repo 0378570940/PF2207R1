@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Vẽ tam giác</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div id="tamgiac1"></div>
+    <div id="tamgiac2"></div>
+    <div id="tamgiac3"></div>
+    <div id="tamgiac4"></div>
+</body>
+<script>
+    // 
+    let b = "*"
+    let a = ""
+    for (let i = 0; i < 5; i++) {
+        a = a + "<br>"
+        for (let j = 0; j <= i; j++) {
+            a = a + b
+        }
+    }
+    document.getElementById("tamgiac1").innerHTML = a;
+    console.log(a);
+    // 
+    document.write("<br>")
+    let b1 = "*"
+    let a1 = "";
+    for (let i = 5; i > 0; i--) {
+        a1 = a1 + "<br>";
+        for (let j = i; j > 0; j--) {
+            a1 = a1 + b1;
+        }
+    }
+    document.getElementById("tamgiac2").innerHTML = a1;
+    console.log(a1);
+    //
+    document.write("<br>")
+    let b3 = "*"
+    let a3 = ""
+    for (let i = 0; i < 5; i++) {
+        a3 = a3 + "<br>"
+        for (let j = 0; j <= i; j++) {
+            a3 = a3 + b3
+            // a3.style.float = "right"
+        }
+    }
+    document.getElementById("tamgiac3").innerHTML = "<p style='text-align: right; float: left;'>" + a3 + "</p>";
+    console.log(a3);
+    //
+    document.write("<br>")
+    document.write("<br>")
+    let b4 = "*"
+    let a4 = "";
+    for (let i = 5; i > 0; i--) {
+        a4 = a4 + "<br>";
+        for (let j = i; j > 0; j--) {
+            a4 = a4 + b4;
+        }
+    }
+    document.getElementById("tamgiac4").innerHTML = "<p style='text-align: right; float: left; position: absolute; top: 330px;'>" + a4 + "</p>";
+    console.log(a4);
+</script>
+
+</html>

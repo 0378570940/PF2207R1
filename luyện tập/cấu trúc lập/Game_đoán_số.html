@@ -1,0 +1,92 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[Bài tập] Game đoán số</title>
+</head>
+
+<body>
+    <button onclick="choi()">choi</button>
+</body>
+<script>
+    function choi() {
+        let number = +prompt("nhập số muốn đoán là: ");;
+        while (number > 100) {
+            number = number + ("người dùng vừa đoán là: ");
+        }
+        do {
+            alert("kết thúc lượt chơi" + number);
+        } while (number >= 100 || number <= 0)
+        alert("người dùng chơi lại " + number);
+    }
+</script>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            height: 30px;
+            width: 80px;
+            background-color: brown;
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Game dự đoán số</h4>
+    <label for="sonhap">Nhập số lớn nhất của dãy số</label>
+    <input type="number" id="sonhap"> <br>
+    <p>Dãy số dự đoán là: <span id="dayso"></span></p>
+    <button type="button" onclick="game()">Play</button>
+    <p>Kết quả dự đoán: <span id="kq"></span></p>
+    <p>Con số máy mắn: <span id="lucky"></span></p>
+    <script>
+        function game() {
+            let soMax = Number(document.getElementById("sonhap").value);
+            soMax++;
+            let j = 0;
+            let text = "";
+            for (j = 0; j < soMax; j++) {
+                text += " " + j + " ";
+            }
+            document.getElementById("dayso").innerHTML = text;
+            let b = Math.floor(Math.random() * soMax);
+            let i = 0;
+            let z = false;
+            for (i = 0; i < 3; i++) {
+                let soDuDoan = prompt("Mời nhập số dự đoán");
+                if (soDuDoan == b) {
+                    z = true;
+                    break;
+                }
+            }
+            if (z == true) {
+                // alert("Chính xác");
+                document.getElementById("kq").innerHTML = "Chính xác";
+            } else {
+                // alert("Không chính xác");
+                document.getElementById("kq").innerHTML = "Không chính xác";
+            }
+            console.log(b);
+            console.log(z);
+            document.getElementById("lucky").innerHTML = b;
+        }
+        
+
+    </script>
+</body>
+
+</html>
