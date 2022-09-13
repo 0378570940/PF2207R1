@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #div {
+            color: red;
+        }
+
+        input {
+            width: 50px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        td {
+            width: 100px;
+            height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Caro</h1>
+    <div id="div"></div>
+    Nhập số ô cần chơi <input type="text" id="input">
+    <div id="result"></div>
+    <button onclick="init()">Display</button>
+</body>
+<script>
+    let arr;
+    let value = "o"
+    function init() {
+        // let number = document.getElementById("input").value
+        let number = +prompt("nhap:")
+        arr = new Array(number)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = new Array(number)
+            for (let j = 0; j < arr[i].length; j++) {
+                arr[i][j] = ""
+            }
+        }
+        play()
+    }
+
+    function play() {
+        let data = "<table border='2' width='300px'>"
+        for (let i = 0; i < arr.length; i++) {
+            data += "<tr>"
+            for (let j = 0; j < arr[i].length; j++) {
+                data += "<td id='" + ("" + i + j) + "' onclick='playGame(" + i + "," + j + ")'>" + arr[i][j] + "</td>"
+            }
+            data += "</tr>"
+        }
+        data += "</table>"
+        console.log(data)
+        document.getElementById("result").innerHTML = data
+    }
+
+    function playGame(row, col) {
+        if (arr[row][col] === "") {
+            arr[row][col] = value
+            let id = "" + row + col;
+            document.getElementById(id).innerHTML = value
+            if (value === "o") {
+                value = "x"
+            } else
+                value = "o"
+            play()
+        } else
+            document.getElementById("div").innerHTML = "Ô này đã đc nhập vào"
+        console.log(arr);
+    }
+</script>
+
+</html>

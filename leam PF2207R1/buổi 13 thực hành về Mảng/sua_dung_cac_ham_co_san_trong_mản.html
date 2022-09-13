@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="result"></div>
+</body>
+<script>
+    // bài1
+    let nyColor = ['red', 'Green', 'white', 'Black'];
+    // let strg = nyColor.toString();
+    // document.getElementById("result").innerHTML = nyColor + "<br>";
+    // cách2
+    // let data = ""
+    // for (let i = 0; i < nyColor.length; i++) {
+    //     data += nyColor[i] + ","
+    // }
+    // console.log(data)
+
+    // bai3
+    // let str = import("nhạp chữ: ")
+    // var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    // var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+    // var result = [];
+    // for (var x = 0; x < str.length; x++) {
+    //     if (UPPER.indexOf(str[x]) !== -1) {
+    //         result.push(str[x].toLowerCase());
+    //     }
+    //     else if (LOWER.indexOf(str[x]) !== -1) {
+    //         result.push(str[x].toUpperCase());
+    //     }
+    //     else {
+    //         result.push(str[x]);
+    //     }
+    // }
+    // // console.log(result.join(''));
+    // document.getElementById("result").innerHTML = nresult.join('');
+
+    //bai2
+    // let number = "23468"
+    // let arr = number.split("")
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr[i] % 2 === 0 && arr[i + 1] % 2 === 0) {
+    //         arr.splice(i + 1, 0, "-")
+    //     }
+    // }
+    // console.log(arr);
+
+    // bai3
+    let string = prompt("nhâp chữ")
+    let array = []
+    for (let i = 0; i < string.length; i++) {
+        if (string[i].toUpperCase() === string[i]) {
+            array.push(string[i].toLowerCase())
+        } else
+            array.push(string[i].toUpperCase())
+    }
+    console.log(array.join())
+</script>
+
+</html>

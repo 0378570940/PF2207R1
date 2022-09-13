@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [1, 3, 4, 6, 7, 9, 10, 3, 5, 19]
+    // bt: find all position of the section of the value is 0 in array
+    // dưới đây là cơ bản tính toán tìm kiếm thuật toán
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            console.log("Vị trí của giá trị 0 trong mảng là: " + i);
+            break
+        }
+    }
+
+    console.log(arr.indexOf(0))
+
+    for (let i = arr.length - 1; i >= 0; i--) {
+        if (arr[i] === 0) {
+            console.log("Vị trí của giá trị 0 trong mảng là: " + i);
+            break
+        }
+    }
+
+    console.log(arr.lastIndexOf(0))
+
+    //thuật toán tìm kiếm nhị phân:
+    //triển khai trên mảng (cấu trúc dữ liệu) đã được sắp xếp
+    //tốc độ tìm kiếm tăng lên nhiều lần (nhanh lần), đặc biệt với dữ liệu lớn hoặc rất lớn
+</script>
+
+</html>

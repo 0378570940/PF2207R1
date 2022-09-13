@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let arr = [1, 5, 7, 8, 9, 15]
+    // filter lọc ra phần tử và tạo ra 1 mảng mới
+    let newarr = arr.filter(function (item) {
+        return item % 2 == 0
+    })
+    console.log("in ra số chẫn trong mảng là:  " + newarr);
+
+    let newarr1 = arr.filter(function (item) {
+        return item % 2 == 1
+    })
+    console.log("in ra số lẻ trong mảng là:  " + newarr1);
+
+    let newarr2 = arr.filter(function (item) {
+        return item >= 5;
+    })
+    console.log("in số lớn hơn 5 là:  " + newarr2);
+
+    let newarr3 = arr.filter(function (item) {
+        return item % 5 == 0;
+    })
+    console.log("in số chia hết cho 5 là:  " + newarr3);
+</script>
+
+</html>
