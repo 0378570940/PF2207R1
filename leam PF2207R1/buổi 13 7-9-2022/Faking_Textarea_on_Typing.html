@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body align="center">
+    <h1>Type anthing slowly</h1>
+    <textarea id="text" cols="30" rows="10" onkeydown="type()"></textarea>
+</body>
+<script>
+    function type() {
+        let arr = ["T", "a", "o", " ", "L", "à", " ", "Đ", "ồ", " ", "N", "g", "o", "c", " ", ":", ")"]
+        let text = document.getElementById("text").value;
+        let data = ""
+        if (text.length > 0) {
+            for (let i = 0; i < text.length; i++) {
+                data += arr[i]
+                if (i === arr.length) {
+                    text.value = ""
+                    data = ""
+                }
+            }
+        }
+        document.getElementById("text").value = data
+        setTimeout(type, 1);
+    }
+</script>
+
+</html>
