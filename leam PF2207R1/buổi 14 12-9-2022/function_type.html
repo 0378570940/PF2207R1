@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //yêu câu: tính tổng 2 số bất kỳ, in giá trị tổng trên console.log
+    // hàm ko có than số, ko có giá trị trả về -> hàm logic
+    function f1() {
+        let num1 = 5;
+        let num2 = 10;
+        let sum = num1 + num2;
+        console.log(sum);
+    }
+    f1()
+
+    // hàm có than số, ko có giá trị trả về
+    function f2(a, b) {
+        let c = a + b;
+        console.log(c);
+    }
+    f2(5, 10)
+
+    // hàm ko có than số, có giá trị trả về
+    function f3() {
+        let num1 = 5;
+        let num2 = 10;
+        let sum = num1 + num2;
+        return sum;
+    }
+    console.log(f3());
+
+    // hàm có than số, có giá trị trả về
+    function f4(a, b) {
+        let c = a + b;
+        return c;
+    }
+    console.log(f4(5, 10));
+</script>
+
+</html>
