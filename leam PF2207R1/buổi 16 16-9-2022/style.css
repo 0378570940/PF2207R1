@@ -1,0 +1,31 @@
+#product-cream {
+    margin: 10px 30%;
+}
+
+button {
+    background-color: rgb(37, 182, 37);
+    color: white;
+    font-weight: bold;
+    border: none;
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+input {
+    height: 30px;
+    width: 250px;
+}
+
+.cream {
+    background-color: rgb(156, 156, 156);
+    width: 400px;
+    height: 60px;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+table {
+    width: 450px;
+}

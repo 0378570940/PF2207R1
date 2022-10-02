@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //khởi tạo lớp trong Js ES5, sử dụng từ khóa function
+    //từ khóa this: dùng trỏ đến chính bản thân của lớp hiện tại
+    // . : sử dụng để gọi đến các thành phần của lớp: thuộc tính và phương thức
+    function Anmini(name, age, weight, height) {
+        //gán giá trị cụ thể cho các thuộc tính khi khai báo đối tượng
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+        this.height = height;
+
+
+        //khai báo phương thức trong lớp gồm:
+        //tên + thân của phương thức
+        this.chename = function (newName) {
+            this.name = newName;
+        }
+
+        this.run = function () {
+            console.log("chạy nhanh như gió");
+        }
+
+        this.speed = function (speed) {
+            console.log("tốc độ" + speed + "Km/h");
+        }
+    }
+
+    //khai báo 1 đối tượng sử dụng lớp tự tạo trong Js
+    //từ khóa new: đánh dấu tạo đối tượng mới
+    //tên của đối tượng chính là tên biến đặt ban đầu: animal1
+    let Anmini1 = new Anmini("cho", 2, 23, 0.3)
+    //sử dụng đối tượng truy xuất thuộc tính
+    console.log(Anmini1.name);
+    //sử dụng đối tương truy xuất phương thức
+    Anmini1.chename("Lợn")
+    console.log(Anmini1.name);
+    var d = new Date('2017-4-25 12:04:05');
+    console.log(d);
+</script>
+
+
+</html>

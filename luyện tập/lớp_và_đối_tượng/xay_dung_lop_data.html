@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="createDate()">Create</button>
+</body>
+<script>
+    class Date {
+        // khai báo khởi tạo đối tượng
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year
+        }
+
+        // khai báo các phương thức của class
+        getDay() {
+            return this.day
+        }
+
+        getMonth() {
+            return this.month
+        }
+
+        getYear() {
+            return this.year
+        }
+
+        setDay(day) {
+            this.day = day
+        }
+
+        setMonth(month) {
+            this.month = month
+        }
+
+        setYear(year) {
+            this.year = year
+        }
+
+        setDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+
+        toString() {
+            return "" + this.day + "/" + this.month + " / " + this.year
+        }
+    }
+
+    function createDate() {
+        let checkDay = false;
+        let day;
+        do {
+            day = prompt("nhập ngày : ")
+            if (day < 1 || day > 31) {
+                checkDay = true;
+            } else {
+                checkDay = false;
+            }
+        } while (checkDay)
+
+        let checkMonth = false;
+        let month;
+        do {
+            month = prompt("nhập tháng : ")
+            if (month < 1 || month > 12) {
+                checkDay = true;
+            } else {
+                checkDay = false;
+            }
+        } while (checkDay)
+
+        let checkYear = false;
+        let year;
+        do {
+            year = prompt("nhập năm : ")
+            if (year < 1945 || year > 9999) {
+                checkDay = true;
+            } else {
+                checkDay = false;
+            }
+        } while (checkDay)
+        let date = new Date(day, month, year)
+        alert(date.toString())
+    }
+
+    // let datas = new date(2, 9, 2022)
+    // let day = datas.getDay();
+    // let month = datas.getMonth();
+    // let year = datas.getYear();
+    // alert("Ngày " + day + " tháng " + month + " năm " + year);
+
+    // datas.setDay(10);
+    // datas.setMonth(10);
+    // datas.setYear(2019);
+    // alert(day + "/" + month + "/" + year);
+</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //getter và setter: nhóm các phương thức tác động trực tiếp đến các thuộc tính
+    //getter: dùng để lấy giá trị của thuộc tính tại thời điểm gọi
+    //setter: dùng để thay đổi giá trị thuộc tính lại thời điểm gọi
+
+    //khởi tạo lớp trong Js ES6, sử dụng từ khóa class + constructor
+    class Animal {
+        name
+        age
+        weight
+        height
+
+        //khai báo hàm khởi tạo đối tượng của class Animal
+        constructor(name, age, weight, height) {
+            this.name = name;
+            this.age = age;
+            this.weight = weight;
+            this.height = height;
+        }
+
+        //khai báo các phương thức thông thường của class
+        chenger(newName) {
+            this.name = newName;
+        }
+
+        eat() {
+            console.log("chạy nha");
+        }
+
+        run(speed) {
+            console.log("tốc độ " + speed + "km/h");
+        }
+
+    }
+    let animal1 = new Animal("cho", 2, 23, 0.3)
+    console.log(animal1.name);
+    animal1.chenger("Meo")
+    animal1.run(55)
+    console.log(animal1.name);
+</script>
+
+</html>

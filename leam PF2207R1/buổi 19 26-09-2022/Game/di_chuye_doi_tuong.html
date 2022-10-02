@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="game"></div>
+    <!-- <button onclick="click()">ok</button> -->
+</body>
+<script>
+    class Helo {
+        // khai báo thuộc tính
+        image
+        top
+        left
+        size
+        // khai báo khơi tạo 1 đối tượng
+        constructor(image, top, left, size) {
+            this.image = image
+            this.top = top
+            this.left = left
+            this.size = size
+        }
+
+        // khai báo phương thức
+        getHeroElement() {
+            return '<img width="' + this.size + '"' +
+                ' height="' + this.size + '"' +
+                ' src="' + this.image + '"' +
+                ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+        }
+        moveRight() {
+            this.left += 20
+        }
+    }
+
+    // tạo đối tượng
+    let helo = new Helo('pikachu.png', 10, 50, 60)
+    function click() {
+        if (helo.left < window.innerHeight - 10) {
+            hero.moveRight()
+        }
+        document.getElementById("game").innerHTML = helo.getHeroElement()
+        setTimeout(start, 10)
+    }
+    start()
+</script>
+
+</html>

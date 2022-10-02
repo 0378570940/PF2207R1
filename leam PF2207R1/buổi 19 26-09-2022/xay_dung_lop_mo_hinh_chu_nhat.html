@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas {
+            width: 100%;
+            height: 5% !important;
+        }
+    </style>
+</head>
+
+<body>
+    chiều dài <input type="text" id="lenght">
+    chiều rộng <input type="text" name="" id="width"> <br>
+    <canvas id="myCamvas" style="border: 1px solid red;"></canvas>
+    <button onclick="dea()">play</button>
+</body>
+<script>
+    class Rectangle {
+        lenght
+        width
+        constructor(lenght, width) {
+            this.lenght = lenght
+            this.width = width
+        }
+        getLength() {
+            return this.lenght;
+        }
+
+        getWidth() {
+            return this.width;
+        }
+
+        setLength(lenght) {
+            this.lenght = lenght;
+        }
+
+        setWidth(width) {
+            this.width = width
+        }
+
+        getAcreage() {
+            return length * width;
+        }
+
+        getPerimeter() {
+            return (length + width) * 2
+        }
+
+        drawRectangle() {
+            let ctx = document.getElementById("myCamvas").getContext("2d")
+            ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
+            ctx.fillStyle = "blue";
+            ctx.fillRect(0, 0, this.length, this.width);
+        }
+    }
+    function dea() {
+        let lenght = document.getElementById("lenght").value;
+        let width = document.getElementById("width").value;
+        let newRect = new Rectangle(lenght, width)
+        newRect.drawRectangle()
+    }
+
+    let rectangle = new Rectangle(100, 200);
+    // rectangle.setLength(300);
+    // rectangle.setWidth(200);
+    let length = rectangle.getLength();
+    let width = rectangle.getWidth();
+    alert("Chiều dài: " + length + "; " + "Chiều rộng: " + width);
+    let perimeter = rectangle.getPerimeter();
+    let area = rectangle.getAcreage();
+    alert("Chu vi: " + perimeter + "; " + "Diện tích: " + area);
+    rectangle.drawRectangle();
+</script>
+
+</html>

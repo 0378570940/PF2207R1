@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //  bài1
+    function number(a, b) {
+        if (a > b) {
+            alert("Thông báo người dùng")
+        } else if (a <= b) {
+            let sum = a + b;
+            return sum;
+        }
+    }
+    console.log(number(6, 6));
+
+    // bài 2
+    let ngoisao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let chomsao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    function string(a) {
+        let stig = prompt("nhập tên ngôi sao: ")
+        let data = "";
+        for (let i = 0; i < stig.length; i++) {
+            ngoisao[i]
+        }
+    }
+
+    // bài4
+    function dientich(a) {
+        let dientichs = a * a * Math.PI
+        return dientichs
+    }
+    console.log(dientich(20).toFixed(3));
+    function chuvi(a) {
+        let chuvis = a * 2 * Math.PI
+        return chuvis
+    }
+    console.log(dientich(20).toFixed(3));
+
+    
+</script>
+
+</html>
